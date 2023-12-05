@@ -1,7 +1,7 @@
-package us.mattgreen;
+package us.rodolfocarmen;
 
 /**
- * Created by mgreen14 on 12/27/17.
+ * Created by rcarmen on 12/27/17.
  */
 public class Teacher extends Person implements Talkable {
     private int age;
