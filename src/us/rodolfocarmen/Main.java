@@ -1,6 +1,7 @@
 package us.rodolfocarmen;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,9 +12,19 @@ public class Main {
         ArrayList<Talkable> zoo = new ArrayList<>();
 
         // Lines to Replace Begin Here
-        zoo.add(new Dog(true, "Bean"));
-        zoo.add(new Cat(9, "Charlie"));
-        zoo.add(new Teacher(44, "Stacy Read"));
+        Scanner keyboard = new Scanner(System.in);
+        String animal;
+
+        while (true) {
+            System.out.println("What type of animal do you want to create? (Enter 'done' to finish): ");
+            animal = keyboard.nextLine();
+
+            if (animal.equalsIgnoreCase("done")) {
+                break;
+            }
+
+            zoo.add(new Animal(animal));
+        }
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
